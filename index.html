@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Ammar Shah - Full Stack Developer Portfolio" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Ammar Shah | Full-Stack Software Engineer</title>
+  <style>
+    :root {
+      --bg-deep: #090d16;
+      --card-bg: rgba(22, 27, 34, 0.7);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --accent-glow: #3b82f6;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar Glassmorphism */
+    .navbar {
+      background: rgba(9, 13, 22, 0.85) !important;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      font-size: 1.25rem;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: var(--text-muted) !important;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent-glow) !important;
+    }
+
+    /* Hero Section with Glowing Gradient */
+    .hero {
+      position: relative;
+      padding: 160px 0 100px;
+      background: radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 60%);
+    }
+
+    .hero h1 {
+      font-weight: 800;
+      letter-spacing: -1.5px;
+    }
+
+    .badge-status {
+      background: rgba(59, 130, 246, 0.1);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(59, 130, 246, 0.4);
+      box-shadow: 0 16px 32px -10px rgba(59, 130, 246, 0.15);
+    }
+
+    /* Tech Badges */
+    .tech-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+
+    .tech-pill:hover {
+      border-color: var(--accent-glow);
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    /* Form Inputs */
+    .form-control {
+      background: rgba(22, 27, 34, 0.8);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      border-radius: 12px;
+      padding: 14px 18px;
+    }
+
+    .form-control:focus {
+      background: rgba(22, 27, 34, 0.95);
+      border-color: var(--accent-glow);
+      color: var(--text-main);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    }
+
+    .btn-primary-glow {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      border: none;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 12px 28px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.45);
+    }
+
+    footer {
+      background: #06090f;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="#">
+        <div class="bg-primary text-white rounded-2 p-1 px-2 fw-bold font-monospace">AS</div>
+        <span>Ammar Shah<span class="text-primary">.</span></span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="https://github.com/Ammarshah10" target="_blank" class="btn btn-outline-light btn-sm ms-lg-3 px-3 rounded-pill">
+          <i class="bi bi-github"></i> GitHub Profile
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="row align-items-center min-vh-50">
+        <div class="col-lg-8 mx-auto text-center">
+          <span class="badge badge-status px-3 py-2 rounded-pill mb-4">
+            <i class="bi bi-circle-fill text-success small me-1"></i> Open to Software Engineering Roles
+          </span>
+          <h1 class="display-3 fw-bold text-white mb-4">
+            Architecting Scalable Web Solutions & <span class="text-primary">Digital Products</span>
+          </h1>
+          <p class="lead text-muted mb-5 px-lg-4">
+            Hi, I'm <strong class="text-white">Ammar Shah</strong>. Full-Stack Developer & Data Operations Specialist from Karachi. I engineer high-performance applications with .NET Core, React, and robust cloud/database workflows.
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#projects" class="btn btn-primary-glow text-white">Explore Projects</a>
+            <a href="#contact" class="btn btn-outline-light px-4 py-2 rounded-pill fw-semibold">Let's Connect</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise / Core Skills -->
+  <section id="expertise" class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h6 class="text-primary fw-bold text-uppercase tracking-wider">What I Do</h6>
+        <h2 class="fw-bold text-white">Core Technical Expertise</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="glass-card p-4 h-100">
+            <div class="text-primary h2 mb-3"><i class="bi bi-code-slash"></i></div>
+            <h4 class="fw-bold text-white mb-3">Full-Stack Development</h4>
+            <p class="text-muted mb-0">
+              Building dynamic, component-driven web apps using React, Node.js, .NET Core MVC, Web API, PHP Laravel, and responsive UI layouts.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="glass-card p-4 h-100">
+            <div class="text-primary h2 mb-3"><i class="bi bi-server"></i></div>
+            <h4 class="fw-bold text-white mb-3">Data & Plant Operations</h4>
+            <p class="text-muted mb-0">
+              Managing enterprise Oracle inventories, tracking industrial downtime breakdowns, and writing advanced Excel VBA automation scripts.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="glass-card p-4 h-100">
+            <div class="text-primary h2 mb-3"><i class="bi bi-phone"></i></div>
+            <h4 class="fw-bold text-white mb-3">Mobile & Cloud Deployments</h4>
+            <p class="text-muted mb-0">
+              Developing cross-platform mobile apps with Flutter & Supabase, alongside professional Git version control and Vercel hosting.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 bg-black bg-opacity-50">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h6 class="text-primary fw-bold text-uppercase">Portfolio</h6>
+        <h2 class="fw-bold text-white">Featured GitHub Repositories</h2>
+        <p class="text-muted">Production-ready applications and software projects.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <i class="bi bi-folder2-open text-primary fs-3"></i>
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">Frontend</span>
+              </div>
+              <h5 class="fw-bold text-white mb-2">ASH Contract</h5>
+              <p class="text-muted small mb-4">Responsive frontend platform for professional contracting, hosted live on Vercel.</p>
+            </div>
+            <a href="https://github.com/Ammarshah10" target="_blank" class="btn btn-outline-light btn-sm rounded-pill w-100">
+              <i class="bi bi-github"></i> View Repository
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <i class="bi bi-folder2-open text-primary fs-3"></i>
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">System</span>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Mill Guide Inspection</h5>
+              <p class="text-muted small mb-4">Industrial tracking solution integrated with database logging and backend workflows.</p>
+            </div>
+            <a href="https://github.com/Ammarshah10" target="_blank" class="btn btn-outline-light btn-sm rounded-pill w-100">
+              <i class="bi bi-github"></i> View Repository
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <i class="bi bi-folder2-open text-primary fs-3"></i>
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">Web App</span>
+              </div>
+              <h5 class="fw-bold text-white mb-2">FUN ZONE</h5>
+              <p class="text-muted small mb-4">Interactive web gaming and entertainment portal with clean layout architecture.</p>
+            </div>
+            <a href="https://github.com/Ammarshah10" target="_blank" class="btn btn-outline-light btn-sm rounded-pill w-100">
+              <i class="bi bi-github"></i> View Repository
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <i class="bi bi-folder2-open text-primary fs-3"></i>
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">Design</span>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Kreatives</h5>
+              <p class="text-muted small mb-4">Creative showcase web project highlighting modern UI styling and elements.</p>
+            </div>
+            <a href="https://github.com/Ammarshah10" target="_blank" class="btn btn-outline-light btn-sm rounded-pill w-100">
+              <i class="bi bi-github"></i> View Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Tech Stack Matrix -->
+  <section id="about" class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h6 class="text-primary fw-bold text-uppercase">Background</h6>
+          <h2 class="fw-bold text-white mb-4">Professional Experience & Education</h2>
+          <p class="text-muted">
+            Working professionally as a Data Entry Operator & Operations Coordinator at Naveena Steel, overseeing plant downtime metrics and Oracle systems.
+          </p>
+          <p class="text-muted mb-4">
+            Simultaneously enrolled in software engineering studies at Aptech, mastering full-stack web architectures, database programming, and enterprise software execution.
+          </p>
+          <a href="https://www.linkedin.com/in/ammar-shah-365354309" target="_blank" class="btn btn-primary-glow text-white">
+            <i class="bi bi-linkedin"></i> Connect on LinkedIn
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <div class="glass-card p-4 p-lg-5">
+            <h4 class="fw-bold text-white mb-4">Technology Stack Matrix</h4>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="tech-pill">C# & .NET Core</span>
+              <span class="tech-pill">ASP.NET MVC</span>
+              <span class="tech-pill">React.js</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Flutter & Supabase</span>
+              <span class="tech-pill">SQL Server</span>
+              <span class="tech-pill">Oracle Enterprise</span>
+              <span class="tech-pill">PHP Laravel</span>
+              <span class="tech-pill">Excel VBA Macros</span>
+              <span class="tech-pill">HTML5 / CSS3 / JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-black bg-opacity-50">
+    <div class="container py-4">
+      <div class="row mb-5 text-center">
+        <div class="col-lg-6 mx-auto">
+          <h6 class="text-primary fw-bold text-uppercase">Get In Touch</h6>
+          <h2 class="fw-bold text-white">Let's Build Something Great</h2>
+          <p class="text-muted">Have a project or collaboration in mind? Drop a message below.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="glass-card p-4 p-lg-5">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Full Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Email Address" required>
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="col-12">
+                <textarea rows="5" class="form-control" placeholder="Your Message..." required></textarea>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-primary-glow text-white w-100 py-3">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-muted">
+    <div class="container">
+      <p class="mb-2 text-white small">&copy; 2026 Ammar Shah. All Rights Reserved.</p>
+      <div class="d-flex justify-content-center gap-3 fs-5">
+        <a href="https://www.linkedin.com/in/ammar-shah-365354309" target="_blank" class="text-muted text-decoration-none"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/Ammarshah10" target="_blank" class="text-muted text-decoration-none"><i class="bi bi-github"></i></a>
+        <a href="mailto:ammarsyed755@gmail.com" class="text-muted text-decoration-none"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

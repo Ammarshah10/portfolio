@@ -1,0 +1,45 @@
+@media (min-width: 768px){
+    .news-input{
+        width: 50%;
+    }
+}
+
+body {
+    font-family: "Sora", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.footer-top {
+    padding-bottom: 90px;
+    padding: 90px;
+    background-color: var(--dark);    
+}
+
+.footer-top a {
+    color: var(--body);
+}
+
+.footer-top a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #242933;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.social-icons a {
+    transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #0dcaf0 !important;
+}
